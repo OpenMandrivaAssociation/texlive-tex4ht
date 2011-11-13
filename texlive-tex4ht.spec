@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-tex4ht
 Version:	20101027
-Release:	1
+Release:	2
 Summary:	Convert (La)TeX to HTML/XML
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/obsolete/support/TeX4ht
@@ -18,9 +18,7 @@ BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 Requires:	texlive-tex4ht.bin
-Provides:	tex4ht = 1:%{version}
-Obsoletes:	tex4ht <= 1:1.0.2008_02_28_2058
-Conflicts:	tex4ht <= 1:1.0.2008_02_28_2058
+%rename tex4ht
 Conflicts:	texlive-texmf <= 20110705-3
 Conflicts:	texlive-doc <= 20110705-3
 
