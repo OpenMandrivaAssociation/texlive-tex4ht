@@ -19,8 +19,6 @@ Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 Requires:	texlive-tex4ht.bin
 %rename tex4ht
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 A converter from TeX and LaTeX to SGML-based formats such as
@@ -36,20 +34,12 @@ restricted-syntax systems such as hyperlatex and gellmu. Note
 that CTAN no longer holds the definitive sources of the
 package: see the 'Readme' file.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -3886,7 +3876,6 @@ package: see the 'Readme' file.
 %doc %{_texmfdistdir}/doc/generic/tex4ht/mn7.html
 %doc %{_texmfdistdir}/doc/generic/tex4ht/mn8.html
 %doc %{_texmfdistdir}/doc/generic/tex4ht/mn9.html
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -3913,5 +3902,3 @@ pushd %{buildroot}%{_javadir}
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
