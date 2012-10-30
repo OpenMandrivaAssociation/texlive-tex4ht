@@ -1,12 +1,12 @@
-# revision 24013
+# revision 28089
 # category Package
 # catalog-ctan /obsolete/support/TeX4ht
-# catalog-date 2010-10-27 12:11:35 +0200
+# catalog-date 2012-02-23 17:06:23 +0100
 # catalog-license lppl
 # catalog-version undef
 Name:		texlive-tex4ht
-Version:	20101027
-Release:	3
+Version:	20120223
+Release:	1
 Summary:	Convert (La)TeX to HTML/XML
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/obsolete/support/TeX4ht
@@ -260,6 +260,7 @@ package: see the 'Readme' file.
 %{_texmfdistdir}/tex/generic/tex4ht/latin2.4ht
 %{_texmfdistdir}/tex/generic/tex4ht/lb.4ht
 %{_texmfdistdir}/tex/generic/tex4ht/letter.4ht
+%{_texmfdistdir}/tex/generic/tex4ht/lettrine.4ht
 %{_texmfdistdir}/tex/generic/tex4ht/lfeenc.4ht
 %{_texmfdistdir}/tex/generic/tex4ht/lineno.4ht
 %{_texmfdistdir}/tex/generic/tex4ht/linguex.4ht
