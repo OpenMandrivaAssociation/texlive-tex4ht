@@ -1,12 +1,12 @@
-# revision 28089
+# revision 24013
 # category Package
 # catalog-ctan /obsolete/support/TeX4ht
-# catalog-date 2012-02-23 17:06:23 +0100
+# catalog-date 2010-10-27 12:11:35 +0200
 # catalog-license lppl
 # catalog-version undef
 Name:		texlive-tex4ht
-Version:	20120223
-Release:	1
+Version:	20101027
+Release:	3
 Summary:	Convert (La)TeX to HTML/XML
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/obsolete/support/TeX4ht
@@ -260,7 +260,6 @@ package: see the 'Readme' file.
 %{_texmfdistdir}/tex/generic/tex4ht/latin2.4ht
 %{_texmfdistdir}/tex/generic/tex4ht/lb.4ht
 %{_texmfdistdir}/tex/generic/tex4ht/letter.4ht
-%{_texmfdistdir}/tex/generic/tex4ht/lettrine.4ht
 %{_texmfdistdir}/tex/generic/tex4ht/lfeenc.4ht
 %{_texmfdistdir}/tex/generic/tex4ht/lineno.4ht
 %{_texmfdistdir}/tex/generic/tex4ht/linguex.4ht
@@ -3903,3 +3902,20 @@ pushd %{buildroot}%{_javadir}
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20101027-3
++ Revision: 756595
+- Rebuild to reduce used resources
+
+* Sun Nov 13 2011 Paulo Andrade <pcpa@mandriva.com.br> 20101027-2
++ Revision: 730342
+- Use rename macro instead of mix of provides/conflicts/obsoletes
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20101027-1
++ Revision: 719674
+- texlive-tex4ht
+- texlive-tex4ht
+- texlive-tex4ht
+
