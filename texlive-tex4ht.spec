@@ -1,4 +1,4 @@
-# revision 33024
+# revision 33926
 # category Package
 # catalog-ctan /obsolete/support/TeX4ht
 # catalog-date 2014-01-03 12:07:14 +0100
@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-tex4ht
 Version:	20140103
-Release:	3
+Release:	4
 Summary:	Convert (La)TeX to HTML/XML
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/obsolete/support/TeX4ht
