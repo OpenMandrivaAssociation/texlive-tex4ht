@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-tex4ht
 Version:	20140103
-Release:	6
+Release:	7
 Summary:	Convert (La)TeX to HTML/XML
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/obsolete/support/TeX4ht
