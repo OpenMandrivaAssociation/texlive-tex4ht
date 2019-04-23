@@ -1,6 +1,6 @@
 Name:		texlive-tex4ht
-Version:	20180705
-Release:	2
+Version:	20190220
+Release:	1
 Summary:	Convert (La)TeX to HTML/XML
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/obsolete/support/TeX4ht
