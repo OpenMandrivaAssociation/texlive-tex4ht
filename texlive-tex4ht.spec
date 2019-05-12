@@ -1,18 +1,26 @@
 Name:		texlive-tex4ht
 Version:	20190409
-Release:	1
+Release:	2
 Summary:	Convert (La)TeX to HTML/XML
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/obsolete/support/TeX4ht
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tex4ht.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tex4ht.doc.tar.xz
+# The so-called source in CTAN includes a prebuilt Java jar file... Let's overwrite
+# that with one built from the real source, available at
+# svn checkout http://svn.gnu.org.ua/sources/tex4ht/trunk tex4ht-source
+Source2:	tex4ht-source-562.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
+BuildRequires:	jmod(java.desktop)
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 Requires:	texlive-tex4ht.bin
 %rename tex4ht
+
+BuildRequires:	jdk-current
+BuildRequires:	javapackages-local
 
 %description
 A converter from TeX and LaTeX to SGML-based formats such as
@@ -55,7 +63,22 @@ package: see the 'Readme' file.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%setup -c -a0 -a1 -a2
+. %{_sysconfdir}/profile.d/90java.sh
+export PATH=$JAVA_HOME/bin:$PATH
+
+cd tex4ht-source-562/src/java
+cat >module-info.java <<'EOF'
+module tex4ht {
+	exports xtpipes;
+	exports xtpipes.util;
+	requires java.desktop;
+}
+EOF
+find . -name "*.java" |xargs javac
+find . -name "*.class" -o -name "*.properties" |xargs jar cf tex4ht.jar
+pwd
+cp -f tex4ht.jar ../../../texmf-dist/tex4ht/bin/
 
 %build
 
