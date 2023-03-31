@@ -1,6 +1,6 @@
 Name:		texlive-tex4ht
 Version:	65590
-Release:	1
+Release:	2
 Summary:	Convert (La)TeX to HTML/XML
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/obsolete/support/TeX4ht
