@@ -1,5 +1,5 @@
 Name:		texlive-tex4ht
-Version:	71730
+Version:	71941
 Release:	1
 Summary:	Convert (La)TeX to HTML/XML
 Group:		Publishing
