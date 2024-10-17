@@ -3,7 +3,7 @@ Version:	72026
 Release:	1
 Summary:	Convert (La)TeX to HTML/XML
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/obsolete/support/TeX4ht
+URL:		https://www.ctan.org/tex-archive/obsolete/support/TeX4ht
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tex4ht.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tex4ht.doc.r%{version}.tar.xz
