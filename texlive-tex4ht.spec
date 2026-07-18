@@ -1,5 +1,5 @@
 %global tl_name tex4ht
-%global tl_revision 79627
+%global tl_revision 79674
 
 Name:		texlive-%{tl_name}
 Version:	%{tl_revision}
