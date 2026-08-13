@@ -1,5 +1,5 @@
 %global tl_name tex4ht
-%global tl_revision 79750
+%global tl_revision 79930
 
 Name:		texlive-%{tl_name}
 Version:	%{tl_revision}
@@ -13,8 +13,7 @@ Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/tex4ht.doc.r%{tl
 Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/tex4ht.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
 BuildSystem:	texlive
-Requires:	texlive(tex4ht.bin)
-Provides:	texlive(%{tl_name}) = %{tl_revision}
+Provides:	texlive(%{tl_name}) = %{version}
 
 %description
 A converter from TeX and LaTeX to SGML-based formats such as (X)HTML,
